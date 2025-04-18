@@ -6,6 +6,7 @@
 //       console.log('hello');
 //     };
 //   }
+  
 //   const count = outer(); 
 //   count(); // 1
 //   count(); // 2
