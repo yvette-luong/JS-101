@@ -145,3 +145,185 @@
 // }
 
 // console.log(notRepeatChar('abacddbec'));
+
+// 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number
+// of occurrences of the specified letter within the string.
+// Sample arguments : 'microsoft.com'
+// 'o'
+// Expected output : 3
+
+// function letterOccurrences(str) {
+//     const counts = {};
+//     let maxCount=0;
+
+//     for (let char of str) {
+
+//         counts[char] = (counts[char] || 0) + 1;
+//         if (counts[char] > maxCount) {
+//             maxCount = counts[char];
+//         }
+//     }
+//     return maxCount;
+// }
+
+// console.log(letterOccurrences('microsoft.com'))
+// console.log(letterOccurrences('goodmorning'))
+
+// 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string
+// in upper case.
+// Example string : 'the quick brown fox'
+// Expected Output : 'The Quick Brown Fox '
+
+// function titleCase(str)
+// 1. Accept a string as input.
+// 2. Break the string into words using split(" ").
+// 3. Loop through each word.
+// 4. Convert the first character to uppercase and combine it with the rest of the word.
+// 5. Join the words back into a single string and return the result.
+
+// function titleCase(str){
+//     const words = str.split(" ");
+
+//     const uppercasedWord = words.map(word => {
+//         return word.charAt(0).toUpperCase() + word.slice(1);
+//     });
+//     return uppercasedWord.join(" ");
+// }
+
+// console.log(titleCase("today is a good day"))
+
+// 20. Write a JavaScript function that generates a string id (specified length) of random characters.
+// Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+// function generatedId(length) {
+//     const characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     let result = '' // this to hold new string ID
+
+//     for (let i = 0; i < length; i++) { //loop through length times
+//         const randomIndex = Math.floor(Math.random()* characters.length); //pick randome char from the list 
+//         result += characters[randomIndex] // add those random char to the string
+//     }
+//     return result
+// }
+
+// console.log(generatedId(4));
+// console.log(generatedId(6));
+
+// 19. Write a JavaScript function that returns array elements larger than a number . 
+
+// function filteredLargerNumbers(arr, num){
+//     const result = [];
+
+//     for (let i= 0; i < arr.length; i++) {
+//         if (arr[i] > num) {
+//             result.push(arr[i]);
+//         }
+//     }
+// return result;
+// }
+
+// console.log(filteredLargerNumbers([1,7,3,4,5], 2));
+
+// 18. Write a function for searching JavaScript arrays with a binary search.
+// Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
+
+
+// function binarySearch(arr, target){
+
+//     let left = 0;
+//     let right = arr.length - 1;
+    
+
+//     while (left <= right) {
+//         const mid = Math.floor((left+right) /2); 
+
+//         if (arr[mid] === target) {
+//             return mid;
+//         } else if (arr[mid] < target) {
+//             left = mid + 1;
+//         } else {
+//             right = mid - 1;
+//         }
+//     }
+//     return null;
+// }
+// const sortedArr = [1, 3, 5, 7, 9, 11];
+
+// console.log(binarySearch(sortedArr,7))
+
+
+// 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
+
+// function letterOccurrences(str){
+//  const counts = {} //to hold the counts of each letter
+
+//  for (let char of str) {
+//     // if (char === '') continue;
+//     counts[char] = (counts[char] || 0) + 1;
+//  }
+//  return counts
+// }
+
+// console.log(letterOccurrences("hello world"));
+
+// 16. Write a JavaScript function to extract unique characters from a string.
+// Example string : "thequickbrownfoxjumpsoverthelazydog"
+// Expected Output : "thequickbrownfxjmpsvlazydg"
+
+
+// function extractChar(str){
+//     let unique = " ";
+
+//     for (let char of str) {
+//         if (!unique.includes(char)) {
+//             unique += char;
+//         }
+//     }
+//     return unique;
+// }
+
+// console.log(extractChar("thequickbrownfoxjumpsoverthelazydog"));
+
+// 4. Write a JavaScript function that returns a passed string with letters in alphabetical order .
+// Example string : 'webmaster'
+// Expected Output : 'abeemrstw'
+// Assume punctuation and numbers symbols are not included in the passed string.
+
+// function orderedLetters(str) {
+//     return str.split("").sort().join("");
+// }
+// console.log(orderedLetters("webmaster"));
+
+// 14. Write a JavaScript function to convert an amount to coins.
+// Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
+// Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
+// Output : 25, 10, 10, 1
+
+// function amountTocoins(amount, coins){
+//     const result = [];
+
+//     for (let i = 0; i < coins.length; i ++) {
+//         while (amount >= coins[i]){
+//             result.push(coins[i]);
+//             amount -= coins[i];
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(amountTocoins(46, [25, 10, 5, 2, 1]));
+
+// 13. Write a JavaScript function to compute the factors of a positive integer .
+
+function computePositiveFactors(num){
+    const factors = [];
+
+    for ( let i = 1; i <= num; i ++) {
+        if (num % i === 0) {
+            factors.push(i);
+        }
+    }
+    return factors;
+}
+
+console.log(computePositiveFactors(12));
