@@ -315,15 +315,15 @@
 
 // 13. Write a JavaScript function to compute the factors of a positive integer .
 
-function computePositiveFactors(num){
-    const factors = [];
+// function computePositiveFactors(num){
+//     const factors = [];
 
-    for ( let i = 1; i <= num; i ++) {
-        if (num % i === 0) {
-            factors.push(i);
-        }
-    }
-    return factors;
-}
+//     for ( let i = 1; i <= num; i ++) {
+//         if (num % i === 0) {
+//             factors.push(i);
+//         }
+//     }
+//     return factors;
+// }
 
-console.log(computePositiveFactors(12));
+// console.log(computePositiveFactors(12));
